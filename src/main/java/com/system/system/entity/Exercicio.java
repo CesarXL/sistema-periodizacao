@@ -15,7 +15,7 @@ public class Exercicio {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     @Column(name = "id_exercicio")
-    private UUID id_exercicio;
+    private UUID idExercicio;
 
     @Column(nullable = false)
     private String nome;
@@ -24,7 +24,7 @@ public class Exercicio {
     private String descricao;
 
     @ManyToOne
-    @JoinColumn(name = "id_usuario", nullable = false)
+    @JoinColumn(name = "id_usuario")
     private Usuario usuario;
 
 }

@@ -21,19 +21,19 @@ public class PeriodizacaoTreino {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     @Column(name = "id_periodizacao_treino")
-    private UUID id_periodizacao_treino;
+    private UUID idPeriodizacaoTreino;
 
     @Column(nullable = false)
-    private LocalDate data_treino;
+    private LocalDate dataTreino;
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private Status status;
 
     @ManyToOne
-    @JoinColumn(name = "id_periodizacao")
+    @JoinColumn(name = "id_periodizacao", nullable = false)
     private Periodizacao periodizacao;
     @ManyToOne
-    @JoinColumn(name = "id_treino")
+    @JoinColumn(name = "id_treino", nullable = false)
     private Treino treino;
 }

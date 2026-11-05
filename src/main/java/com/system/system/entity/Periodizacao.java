@@ -20,7 +20,7 @@ public class Periodizacao {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     @Column(name = "id_periodizacao")
-    private UUID id_periodizacao;
+    private UUID idPeriodizacao;
 
     @Column(nullable = false)
     private String nome;
@@ -28,9 +28,9 @@ public class Periodizacao {
     private String descricao;
 
     @Column(nullable = false)
-    private LocalDate data_inicio;
+    private LocalDate dataInicio;
     @Column(nullable = false)
-    private LocalDate data_fim;
+    private LocalDate dataFim;
 
     @ManyToOne
     @JoinColumn(name = "id_usuario", nullable = false)

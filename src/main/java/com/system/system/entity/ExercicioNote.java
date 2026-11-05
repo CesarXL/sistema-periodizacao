@@ -24,7 +24,7 @@ public class ExercicioNote {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     @Column(name = "id_note")
-    private UUID id_note;
+    private UUID idNote;
 
     @Column(columnDefinition = "TEXT")
     private String anotacao;
